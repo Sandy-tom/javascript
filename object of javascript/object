@@ -11,3 +11,10 @@ Hashes in Ruby and Perl
 java script object is the collection of diffrent property 
   *property of the object can be changed or added or deleted 
   
+Accessing Object Methods
+objectName.methodName()
+*You will typically describe fullName() as a method of the person object, and fullName as a property.
+
+*The fullName property will execute (as a function) when it is invoked with ().
+
+*This example accesses the fullName() method of a person object:
