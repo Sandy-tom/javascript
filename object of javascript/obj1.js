@@ -1,4 +1,5 @@
-
+// var mj = new object() 
+// above the method also creat the object 
 var mj = {
 name :"sa",
 l_name : "kumar",
