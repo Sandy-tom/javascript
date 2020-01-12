@@ -1,0 +1,16 @@
+{
+"name":"sandy",
+"last":"name",
+"arr1":[
+ {
+  "name":"santhosh",
+  "birth-date":"7-4-2000"
+  },
+  {
+    "language":"tamil",
+    "college":"anna university"
+  }
+
+]
+
+}
