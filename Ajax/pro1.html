@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+  <script>
+       function ondata(){
+         var xhttp = new XMLHttpRequest();
+         xhttp.onreadystatechange = function(){
+          if(this.readyState==4 && this.status==200){
+
+            var javaobj = JSON.parse(xhttp.response);
+            document.getElementById('mass').innerHTML=javaobj.arr1[0].name;
+          }
+         };
+         xhttp.open("GET","h1.json",true); 
+         xhttp.send();
+       }
+       
+    </script>
+    <input type="button"name="name" onclick="ondata()" value="Click"/>
+    <div id="mass"></div>
+</body>
+</html>
