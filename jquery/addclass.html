@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="hs/jquery1.js"></script>
+    <title>Document</title>
+    <style>
+       .div{
+           color: blue;
+           background-color: chartreuse;
+           font-size: 15px;
+           border:15px solid black;
+       }
+       .file{
+           color: blueviolet;
+           background-color: cyan;
+           font-size: 15px;
+           border:15px solid red;
+       }
+       .fire{
+           color: red;
+           background-color: springgreen;
+       }
+    </style>
+</head>
+<body>
+    <h1 class="kops">
+        <div>
+           hai
+        </div>
+    </h1>
+    <p class="sam">finger</p>
+    <p class="simple">simple</p>
+    <p class="demo">demo</p>
+    <script>
+        $("h1").addClass("file");//it will add the class to file 
+
+        $("p").addClass(function(index,addmove){  //it check the continues p tag if it equal to the demo class it will return next class
+            var swape;
+            if(addmove === "demo"){
+                swape = "fire";
+            }
+            return swape;
+        });
+    </script>
+</body>
+</html>
