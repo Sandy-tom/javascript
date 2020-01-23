@@ -19,7 +19,7 @@
            font-size: 15px;
            border:15px solid red;
        }
-       .fire{
+       .fire2{
            color: red;
            background-color: springgreen;
        }
@@ -40,7 +40,8 @@
         $("p").addClass(function(index,addmove){  //it check the continues p tag if it equal to the demo class it will return next class
             var swape;
             if(addmove === "demo"){
-                swape = "fire";
+                 $(this).removeClass(addmove);//it will remove the class of current tag
+                 swape = "fire"+index;
             }
             return swape;
         });
