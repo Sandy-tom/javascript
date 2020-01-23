@@ -36,8 +36,8 @@
     <p class="demo">demo</p>
     <script>
         $("h1").addClass("file");//it will add the class to file 
-
-        $("p").addClass(function(index,addmove){  //it check the continues p tag if it equal to the demo class it will return next class
+        // .oops p select the para tag in side the class
+        $(".oops p").addClass(function(index,addmove){  //it check the continues p tag if it equal to the demo class it will return next class
             var swape;
             if(addmove === "demo"){
                  $(this).removeClass(addmove);//it will remove the class of current tag
