@@ -29,3 +29,39 @@
     </script>
 </body>
 </html>
+
+
+// by triger passing data to the value
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="hs/jquery1.js"></script>
+    <title>Document</title>
+    <style>
+        button{
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="come">1</button>
+    <button id="kajal">1</button>
+    <script>
+       $(document).ready(function(){ 
+        $("#come").click(function(e,data){
+             $(this).html((($(this).html()*1)+1));
+             console.log(data.mass);
+             console.log(data.tamil)
+        });
+        $("#kajal").click(function(){
+            $(this).html((($(this).html()*1)+1));
+            $("#come").trigger("click",[{mass:"vijay",tamil:"star"}]);// passing the data t through the triger method
+       });
+    });
+    </script>
+</body>
+</html>
