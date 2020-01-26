@@ -48,3 +48,31 @@
     </script>
 </body>
 </html>
+
+
+
+
+// it is other type add class with atter method
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="hs/jquery1.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" class="tamil">
+        <input type="button" class="english">
+    </form>
+    <script>
+        $("input").addClass(function(index){
+                if($(this).attr('type') == "text"){  // by using the atter class we use to take the type of input form
+                    return "haii"+index;    // if the condition was pass it will return the class and it set the class  
+                }
+        })
+    </script>
+</body>
+</html>
