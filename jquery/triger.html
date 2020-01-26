@@ -65,3 +65,49 @@
     </script>
 </body>
 </html>
+
+// pass the value throug the json
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="hs/jquery1.js"></script>
+    <title>Document</title>
+    <style>
+        button{
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="come">1</button>
+    <button id="kajal">1</button><br>
+     enter the name:  <input type="text" class="user">
+     enter the age:   <input type = "text" class="user1">
+    <input type="submit" value="killer">
+    <!--<input type="text" class="single">  --> 
+    <script>
+       $(document).ready(function(){ 
+        $("#come").click(function(e,data){
+             $(this).html((($(this).html()*1)+1));
+             console.log(data.mass);
+             console.log(data.tamil)
+        });
+        $("#kajal").click(function(){
+            $(this).html((($(this).html()*1)+1));
+            $("#come").trigger("click",[{mass:"vijay",tamil:"star"}]);
+       });
+       $("input:submit").click(function(){
+              var s = $(".user").val();
+              var age = $(".user1").val();
+              var h = {"name":s,"age":age};  // user assign jspn value from text box
+              console.log(h);// print object in console
+            //  $(".single").val(h.name); // pass the data to value of the input text box
+       });
+    });
+    </script>
+</body>
+</html>
