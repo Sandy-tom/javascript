@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.htm{
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #042331;
+    transition: .4s;
+}
+.htm .add{
+    font-size: 22px;
+    line-height: 70px;
+    color: cornsilk;
+    background-color: #063146;
+    text-align: center;
+    user-select: none;
+    padding-right: 50px;
+}
+.htm ul a{
+    display: block;
+    height: 100%;
+    line-height: 70px;
+    font-size: 20px;
+    left: 20px;
+    padding-left: 40px;
+    color: wheat;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+.htm ul li:hover a{
+    padding-left:20px ;
+}
+.htm ul a i{
+    margin-right: 10px;
+}
+#go{
+    display: none;
+}
+label #butt , label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background: #042331;
+    border-radius: 5px;
+}
+label #butt{
+    left:40px;
+    top:25px;
+    font-size: 35px;
+    color: white;
+    padding: 5px;
+    transition: all .5s;
+}
+label #cancel{
+    z-index: 1;
+    font-size: 25px;
+    color: white;
+    padding: 5px;
+    top:25px;
+    left: -195px;
+    transition: all .10s ease;
+}
+#go:checked ~ .htm{
+    left: 0;
+}
+#go:checked ~ label #butt{
+     left: 250px;
+     opacity: 0;
+     pointer-events: none;
+}
+#go:checked ~ label #cancel{
+      left: 180px;
+}
