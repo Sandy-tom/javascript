@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+.wrap{
+    height: 100%;
+    width: 100%;
+}
+.top{
+    background: #80cbc4;
+    height: 60px;
+    display: flex;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+}
+.top .pizza{
+    width: 80px;
+    background: #004d40;
+    position: relative;
+    font-size: 28px;
+}
+.top .pizza .chess{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+}
+.top .pizza .chess > div{
+     top:0;
+     left:0;
+     background: #fff;
+     width: 30px;
+     height: 2px;
+     position: absolute;
+}
+.top .pizza .chess .two{
+    width: 40px;
+    height: 2px;
+    background: #fff;
+    top:10px;
+}
+.top .pizza .chess .three{
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    top:20px;
+}
+.top .menu{
+    width: calc(100% - 80px);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.top .menu .logo{
+    color: #004d40;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.top .menu .right ul li{
+    position: relative;
+}
+.top .menu .right ul li .fa{
+    font-size: 22px;
+    cursor: pointer;
+    cursor: #004d40;
+}
+.top .menu .right ul li .su{
+    position: absolute;
+    top:35px;
+    right: -10px;
+    width: 180px;
+    background: #fff;
+    padding: 10px 0;
+    box-shadow: 0 0 2px rgbd(0,0,0,0.5);
+    border-radius: 3px;
+    user-select: none;
+    display: none;
+}
+.top .menu .right ul li .su .item1{
+    padding: 10px;
+    cursor: pointer;
+    cursor: #004d40;
+}
+.top .menu .right ul li .su .item1:hover{
+    background: #e0f2f1;
+}
+.top .menu .right ul li .su .item1:before{
+    content: " ";
+    position: absolute;
+    top:-20px;
+    right: 10px;
+    border: solid 10px;
+    border-color: transparent transparent #fff transparent;  
+}
+.top .menu .right ul li .active{
+    display: block;
+}
+.wrap .main_content .side_bar{
+    position: fixed;
+    top:60px;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #004d40;
+    transition: all 0.3s ease;
+}
+.wrap .main_content .side_bar .side_inn{
+    position: relative;
+}
+.wrap .main_content .side_bar .side_inn .profile{
+    display: flex;
+    align-items: center;
+}
+.wrap .main_content .side_bar .side_inn .profile .img > img{
+    width: 45px;
+    border-radius: 50%;
+    margin: 10px;
+    margin-left: 10px;
+}
+.wrap .main_content .side_bar .side_inn .profile .pro_info{
+    color: white;
+}
+.main_content .side_bar .side_inn .profile .pro_info p:first-child{
+    margin-bottom: 3px;
+    font-size: 14px;
+    color: #80cbc4;
+}
+.main_content .side_bar .side_inn ul li a{
+   color: white;
+   font-size: 18px;
+   padding: 20px 30px;
+   display: flex;
+   align-items: center;
+   margin-bottom: 5px;
+   transition: all 0.3s ease;
+}
+.main_content .side_bar .side_inn ul li a .icon{
+    margin-right: 10px;
+    font-size: 20px;
+}
+.main_content .side_bar .side_inn ul li a span{
+    display: inline-block;
+}
+.main_content .side_bar .side_inn ul li a:hover{
+    background: #fff;
+    color: #004d40;
+}
+.main_content .content{
+    margin-top: 60px;
+    width: calc(100%-250px);
+    margin-left: 225px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+.main_content .content .it{
+    border: 1px solid #e0f2f1;
+    margin-bottom: 30px;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 22px;
+}
+.active .main_content .side_bar{
+    width: 80px;
+} 
+.active .main_content .side_bar ul li a span.title,
+.active .main_content .side_bar .profile .pro_info p
+{
+    display: none;
+}
+.active .main_content .content{
+    width: calc(100%-80px);
+    margin-left: 80px;
+}
